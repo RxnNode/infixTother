@@ -1,13 +1,17 @@
 # infixTother
 *THIS PROJECT IS UNDER DEVELOPMENT.*  
 ## How to Use?
-1. One digit per terms.
+
+1. One digit per terms  
     It can convert a expression that ONLY contains ONE-DIGIT terms.  
     For example :  
     >1+(2*3-(4/5^2)*7) is convertible.  
     >12 +( 21 *3-(4/ 54 ^2)*7) is not convertible.
-2.
-
+2. Well-formed expressions  
+    For example :  
+    >1+(2*3-(4/5^2)*7) is well-formed.   
+    >*1+3/-3 is not well-formed.
+    *Please avoid negative number in the begining of expression.*
 
 
 
