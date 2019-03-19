@@ -10,7 +10,7 @@
 2. Well-formed expressions  
     For example :  
     >1+(2*3-(4/5^2)*7) is well-formed.   
-    >*1+3/-3 is not well-formed.
+    >*1+3/-3 is not well-formed.   
     *Please avoid negative number in the begining of expression.*
 
 ## Downloads
