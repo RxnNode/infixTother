@@ -1,3 +1,5 @@
 # infixTother
 
 THIS PROJECT IS UNDER DEVELOPMENT.
+
+## How To Use
