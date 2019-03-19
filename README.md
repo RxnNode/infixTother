@@ -22,3 +22,6 @@
 ![4^2*3-3+8/4/(1+1)](/images/test02.png)
 3. 1+(2*3-(4/2*2)*7)
 ![1+(2*3-(4/2*2)*7)](/images/test03.png)
+
+## Downloads
+![infixTother v1.0](https://github.com/RxnNode/infixTother/releases)
