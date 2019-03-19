@@ -7,3 +7,5 @@ For example :
 >12 +( 21 *3-(4/ 54 ^2)*7) is not convertible
 
 ## Test result
+1. 1+(2*3-(4/5^2)*7)
+![1+(2*3-(4/5^2)*7)](/images/test01.png)
