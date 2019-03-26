@@ -193,58 +193,64 @@ public class infixTother {
     }
 
     /*
-    String轉換成char array與合法確認
+     *      Checker
+     *      String轉換成char array與合法確認
+     *      Check math math expression, and convert string to char array
      */
     private static boolean StrLegal(char[] str){
 
         Stack<Character> CheckingStack = new Stack<Character>();
-        String Name = "Checker";
         LetterAndNum = false;
-        logger.MessageLog("NOW START CHECKING YOUR STATEMENT!", "System");
+        logger.MessageLog("NOW START CHECKING YOUR EXPRESSION!", "Checker");
 
-        //Check expression ends with operator
+        //Fast Check expression ends with operator
         if (!Character.isLetterOrDigit(str[str.length - 1]) && str[str.length - 1] !=')' && str[str.length - 1] !=']' && str[str.length - 1] !='}'){
             logger.errorcode(12);
+            System.out.println("Expression dose end with operator or special character");
             return false;
         }
+        System.out.println("Expression dose not end with operator or special character");
 
-        //
+        //check start
         for (int i = 0; i < str.length; i++) {
-            if (Character.isLetter(str[i])){
-                LetterAndNum = true;
-                logger.MessageLog("The statement contains LETTER and NUMBER so it can't be evaluated.", Name);
-            }else if (!Character.isDigit(str[i]) && str[i] != ' '){
-                //System.out.println("[Checker]Now start checking operator!" + str[i] + i);
-                logger.MessageLog("Now start checking operator："+str[i]+"!", Name);
-                switch (str[i]){
 
+            if (Character.isLetter(str[i])){
+                if (!LetterAndNum){
+                    LetterAndNum = true;
+                    logger.MessageLog("The expression contains LETTER and NUMBER so it can't be evaluated.", "Checker");
+                }
+                System.out.println("Found a letter!");
+            }else if (!Character.isDigit(str[i]) && str[i] != ' '){
+
+                logger.MessageLog("Now start checking operator： "+str[i]+" !", "Checker");
+                switch (str[i]){
                     case '(': case '[': case '{':
                         CheckingStack.push(str[i]);
-                        //System.out.println("[Checker]Found ([{ ! and push in stack " + CheckingStack.peek());
-                        logger.MessageLog("Found '([{' ! and push " + CheckingStack.peek() + " in stack!", Name);
+                        System.out.println("[Checker]Found ([{ ! and push in stack " + CheckingStack.peek());
+                        logger.MessageLog("Found '([{' ! and push " + CheckingStack.peek() + " in stack!", "Checker");
                         break;
                     case ')':
                         if (CheckingStack.size() <= 0) {
                             //System.out.println("[Checker] ) didn't match! ");
-                            logger.MessageLog(" ')' didn't match! !", Name);
+                            logger.MessageLog(" ')' didn't match! !", "Checker");
                             return false;
                         }else {
                             char cPair = CheckingStack.pop();
                             if (cPair != '(') {
                                 //System.out.println("[Checker] ) didn't pair!!");
-                                logger.MessageLog(" ')' didn't match! !", Name);
+                                logger.MessageLog(" ')' didn't match! !", "Checker");
                                 return false;
                             }
                             break;
                         }
                     case ']':
                         if (CheckingStack.size() <= 0) {
-                            logger.MessageLog(" ']' didn't match! !", Name);
+                            logger.MessageLog(" ']' didn't match! !", "Checker");
                             return false;
                         }else {
                             char cPair = CheckingStack.pop();
                             if (cPair != '[') {
-                                logger.MessageLog(" ']' didn't match! !", Name);
+                                logger.MessageLog(" ']' didn't match! !", "Checker");
                                 return false;
                             }
                             break;
@@ -252,13 +258,13 @@ public class infixTother {
                     case '}':
                         if (CheckingStack.size() <= 0) {
                             //System.out.println("[Checker] } ");
-                            logger.MessageLog(" '}' didn't match! !", Name);
+                            logger.MessageLog(" '}' didn't match! !", "Checker");
                             return false;
                         }else {
                             char cPair = CheckingStack.pop();
                             if (cPair != '{') {
                                 //System.out.println("[Checker] } didn't pair!!");
-                                logger.MessageLog(" '}' didn't match! !", Name);
+                                logger.MessageLog(" '}' didn't match! !", "Checker");
                                 return false;
                             }
                             break;
@@ -275,7 +281,7 @@ public class infixTother {
             }
         }
         if (!CheckingStack.isEmpty()) {
-            logger.MessageLog("'"+CheckingStack.pop()+"' didn't match!", Name);
+            logger.MessageLog("'"+CheckingStack.pop()+"' didn't match!", "Checker");
             return false;
         }
         //if (CheckingStack.size() > 0) return false; //烙單左括弧
