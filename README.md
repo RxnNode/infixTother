@@ -1,11 +1,11 @@
 # infixTother
 *THIS PROJECT IS UNDER DEVELOPMENT.*  
 **infixTother** is a simple app that convert infix expression to postfix/prefix expression.  
-- [Limitation?](https://github.com/RxnNode/infixTother#limitation)
+- [Limitation?](https://github.com/RxnNode/infixTother#limitation-)
 - [To Do list](https://github.com/RxnNode/infixTother#to-do-list-)
-- [Downloads](https://github.com/RxnNode/infixTother#downloads)
+- [Downloads](https://github.com/RxnNode/infixTother#downloads-)
 
-## Limitation?
+## Limitation? [↑](https://github.com/RxnNode/infixTother#infixtother)
 1. One digit per terms  
     It can convert a expression that ONLY contains ONE-DIGIT terms.  
     For example :  
@@ -17,7 +17,7 @@
     >*1+3/-3 is not well-formed.   
     *Please avoid negative number in the begining of expression.*
 
-## Downloads
+## Downloads [↑](https://github.com/RxnNode/infixTother#infixtother)
 [infixTother v1.0](https://github.com/RxnNode/infixTother/releases)
 ## Test result
 1. 1+(2*3-(4/5^2)*7)
