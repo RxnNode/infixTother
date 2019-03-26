@@ -43,10 +43,13 @@ public class logger {
         switch (code){
             case 11:
                 Controller.getInstance().setLogArea("[Error "+ code +"]There are somethings wrong with your infix expression. Please check it.");
+                break;
             case 12:
-                Controller.getInstance().setLogArea("[Error "+ code +"]Expression should not end with operator!");
-            /*default:
-                Controller.getInstance().setLogArea("[System]Logger error");*/
+                Controller.getInstance().setLogArea("[Error "+ code +"]Expression should not end with operator or special character!");
+                break;
+            default:
+                Controller.getInstance().setLogArea("[System]Logger error");
+                break;
         }
 
     }
