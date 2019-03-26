@@ -22,3 +22,7 @@
 ![4^2*3-3+8/4/(1+1)](/images/test02.png)
 3. 1+(2*3-(4/2*2)*7)
 ![1+(2*3-(4/2*2)*7)](/images/test03.png)
+
+## To Do list
+-[] KILL Limitation 1.
+-[] Auto checking for Limitation 2. 
