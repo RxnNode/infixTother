@@ -6,7 +6,7 @@ import java.awt.*;
 import java.time.Instant;
 
 public class Controller {
-
+    //all UI to v
     public TextField inputbox;
     public TextArea LogArea;
     public TextField PrefixTextF;
@@ -14,27 +14,21 @@ public class Controller {
     public TextField PrefixValue;
     public TextField PostfixValue;
 
+    //Make controller accessible
     private static Controller Instance;
-
     public Controller(){
         Instance = this;
     }
-
     public static Controller getInstance(){
         return Instance;
     }
 
+    //Submit Button
     public void SetInButtonClicked(){
-
         logger.ClearLog();
         infixTother.infixTother(inputbox.getText());
-        //TextInput.StrToChar(inputbox.getText());
-        //PostfixTextF.setText(infixTother.infixToPostfix(inputbox.getText()));
-        //infixTother.infixToPostfix(inputbox.getText());
-        //PrefixTextF.setText(infixTother.infixToPrefix(inputbox.getText()));
-        //LogArea.appendText("\n");
     }
-
+    //Reset Button
     public void ResetButtonClicked(){
         logger.ClearLog();
         LogArea.setText(null);
