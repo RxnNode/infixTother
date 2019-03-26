@@ -11,6 +11,7 @@
     For example :  
     >1+(2*3-(4/5^2)*7) is convertible.  
     >12 +( 21 *3-(4/ 54 ^2)*7) is not convertible.
+    This limitation may be fixed in future.
 2. Well-formed expressions  
     For example :  
     >1+(2*3-(4/5^2)*7) is well-formed.   
