@@ -8,6 +8,7 @@ public class infixTother {
 
     private static char[] infixArr;
     private static boolean LetterAndNum = false;
+    private static String[] infixSArr;
 
     public static void infixTother(String strinfix){
         infixArr = strinfix.toCharArray();
@@ -217,7 +218,7 @@ public class infixTother {
             if (Character.isLetter(str[i])){
                 if (!LetterAndNum){
                     LetterAndNum = true;
-                    logger.MessageLog("The expression contains LETTER and NUMBER so it can't be evaluated.", "Checker");
+                    logger.MessageLog("The expression contains LETTER so it can't be evaluated.", "Checker");
                 }
                 System.out.println("Found a letter!");
             }else if (!Character.isDigit(str[i]) && str[i] != ' '){
@@ -226,18 +227,18 @@ public class infixTother {
                 switch (str[i]){
                     case '(': case '[': case '{':
                         CheckingStack.push(str[i]);
-                        System.out.println("[Checker]Found ([{ ! and push in stack " + CheckingStack.peek());
-                        logger.MessageLog("Found '([{' ! and push " + CheckingStack.peek() + " in stack!", "Checker");
+                        System.out.println("[Checker]Found "+str[i]+" ! and push it onto stack " + CheckingStack.peek());
+                        logger.MessageLog("Found "+str[i]+" ! and push " + CheckingStack.peek() + " onto stack!", "Checker");
                         break;
                     case ')':
                         if (CheckingStack.size() <= 0) {
-                            //System.out.println("[Checker] ) didn't match! ");
+                            System.out.println("[Checker] "+str[i]+" didn't match! ");
                             logger.MessageLog(" ')' didn't match! !", "Checker");
                             return false;
                         }else {
                             char cPair = CheckingStack.pop();
                             if (cPair != '(') {
-                                //System.out.println("[Checker] ) didn't pair!!");
+                                System.out.println("[Checker] ) didn't pair!!");
                                 logger.MessageLog(" ')' didn't match! !", "Checker");
                                 return false;
                             }
