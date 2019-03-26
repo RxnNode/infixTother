@@ -1,3 +1,9 @@
+
+
+// This class is abandoned.
+
+
+
 package infixTother;
 public class TextInput {
 
