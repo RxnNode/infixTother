@@ -1,6 +1,9 @@
 # infixTother
 *THIS PROJECT IS UNDER DEVELOPMENT.*  
-**infixTother** is a simple app that convert infix expression to postfix/prefix expression.
+**infixTother** is a simple app that convert infix expression to postfix/prefix expression.  
+- [Limitation?](https://github.com/RxnNode/infixTother#limitation)
+- [To Do list](https://github.com/RxnNode/infixTother#to-do-list)
+- [Downloads](https://github.com/RxnNode/infixTother#downloads)
 ## Limitation?
 1. One digit per terms  
     It can convert a expression that ONLY contains ONE-DIGIT terms.  
@@ -23,6 +26,6 @@
 3. 1+(2*3-(4/2*2)*7)
 ![1+(2*3-(4/2*2)*7)](/images/test03.png)
 
-## To Do list
+## To Do list [↑](https://github.com/RxnNode/infixTother#infixtother)
 - [ ] KILL Limitation 1.  
 - [ ] Auto checking for Limitation 2.   
