@@ -38,6 +38,16 @@ public class logger {
         Controller.getInstance().setLogArea("["+Name+"]"+Message);
     }
 
+    public static void errorcode(int code){
+        switch (code){
+            case 1:
+                Controller.getInstance().setLogArea("[Checker]There are somethings wrong with your infix expression. Please check it.");
+            default:
+                Controller.getInstance().setLogArea("[System]Logger error");
+        }
+
+    }
+
     public static void UnnamedMessageLog(String  NnMessage){
         Controller.getInstance().setLogArea(NnMessage);
     }

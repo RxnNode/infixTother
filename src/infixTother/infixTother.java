@@ -15,7 +15,7 @@ public class infixTother {
             infixToPrefix(infixArr);
             infixToPostfix(infixArr);
         }else {
-            logger.MessageLog("There are somethings wrong with your infix statement.Please check it.", "Checker");
+            logger.errorcode(1);
         }
 
     }
