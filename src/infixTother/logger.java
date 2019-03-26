@@ -2,6 +2,7 @@
 
 package infixTother;
 
+import com.sun.tools.classfile.ConstantPool;
 import javafx.fxml.FXML;
 import javafx.scene.control.TextArea;
 
@@ -40,10 +41,12 @@ public class logger {
 
     public static void errorcode(int code){
         switch (code){
-            case 1:
-                Controller.getInstance().setLogArea("[Checker]There are somethings wrong with your infix expression. Please check it.");
-            default:
-                Controller.getInstance().setLogArea("[System]Logger error");
+            case 11:
+                Controller.getInstance().setLogArea("[Error "+ code +"]There are somethings wrong with your infix expression. Please check it.");
+            case 12:
+                Controller.getInstance().setLogArea("[Error "+ code +"]Expression should not end with operator!");
+            /*default:
+                Controller.getInstance().setLogArea("[System]Logger error");*/
         }
 
     }
