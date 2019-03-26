@@ -2,8 +2,9 @@
 *THIS PROJECT IS UNDER DEVELOPMENT.*  
 **infixTother** is a simple app that convert infix expression to postfix/prefix expression.  
 - [Limitation?](https://github.com/RxnNode/infixTother#limitation)
-- [To Do list](https://github.com/RxnNode/infixTother#to-do-list)
+- [To Do list](https://github.com/RxnNode/infixTother#to-do-list-)
 - [Downloads](https://github.com/RxnNode/infixTother#downloads)
+
 ## Limitation?
 1. One digit per terms  
     It can convert a expression that ONLY contains ONE-DIGIT terms.  
