@@ -15,7 +15,7 @@ public class infixTother {
             infixToPrefix(infixArr);
             infixToPostfix(infixArr);
         }else {
-            logger.errorcode(1);
+            logger.errorcode(11);
         }
 
     }
@@ -177,7 +177,7 @@ public class infixTother {
     }
 
     /*
-    優先權比較
+     *      優先權比較
      */
     private static int priority(char p){
         switch(p) {
@@ -201,14 +201,17 @@ public class infixTother {
         String Name = "Checker";
         LetterAndNum = false;
         logger.MessageLog("NOW START CHECKING YOUR STATEMENT!", "System");
+
+        //Check expression ends with operator
         if (!Character.isLetterOrDigit(str[str.length - 1]) && str[str.length - 1] !=')' && str[str.length - 1] !=']' && str[str.length - 1] !='}'){
-            logger.MessageLog("Statement should not end with operator!", Name);
+            logger.errorcode(12);
             return false;
         }
+
+        //
         for (int i = 0; i < str.length; i++) {
             if (Character.isLetter(str[i])){
                 LetterAndNum = true;
-                //System.out.println("[Checker]There is a Letter!!");
                 logger.MessageLog("The statement contains LETTER and NUMBER so it can't be evaluated.", Name);
             }else if (!Character.isDigit(str[i]) && str[i] != ' '){
                 //System.out.println("[Checker]Now start checking operator!" + str[i] + i);
